@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
+import SendIcon from "@mui/icons-material/Send";
 
 export default function Home() {
   const users = ["Ahmet", "Mehmet", "Ali", "Veli"];
@@ -16,6 +19,19 @@ export default function Home() {
 
       <Header systemUsers={users} />
       <Footer gonderilecekHayvan={animals} />
+      <Button variant="contained" color="success" startIcon={<DeleteIcon />}>
+        Button
+      </Button>
+      <Button
+        variant="contained"
+        style={{ backgroundColor: "gray", marginLeft: "28px" }}
+        // size="large"
+        endIcon={<SendIcon />}
+      >
+        Button
+      </Button>
+
+      {/* CSS kolaylık için : MATERİAL UI   -    ANT DESİNG */}
     </>
   );
 }
