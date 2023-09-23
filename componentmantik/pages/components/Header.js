@@ -1,4 +1,4 @@
-export default function TaskCreate({ systemUsers }) {
+export default function TaskCreate(params) {
   return (
     <div
       style={{
@@ -8,7 +8,7 @@ export default function TaskCreate({ systemUsers }) {
       }}
     >
       <h3>Header</h3>
-      <p>{systemUsers.length}</p>
+      <p>{params.systemUsers.length}</p>
     </div>
   );
 }
